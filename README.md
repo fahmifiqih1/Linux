@@ -1,20 +1,20 @@
 # Add Additional new disk
-##Format disk after you use
+## Format disk after you use
 ```
 sudo mkfs.ext4 -m 0 -E lazy_itable_init=0,lazt_journal_init=0,discard /dev/sdb
 ```
 
-##Create directory for additioanl storage /dev/sdb
+## Create directory for additioanl storage /dev/sdb
 ```
 sudo mkdir -p /var/lib/mariadbsql
 ```
 
-##Mount /dev/sdb to directory /var/lib/mariadbsql
+## Mount /dev/sdb to directory /var/lib/mariadbsql
 ```
 sudo mount -o discard,defaults /dev/sdb /var/lib/mariadbsq
 ```
 
-##Show mount 
+## Show mount 
 ```
 df -h
 ```
